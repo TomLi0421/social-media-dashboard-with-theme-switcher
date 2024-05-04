@@ -1,41 +1,31 @@
 import React from "react";
+import facebookIcon from "../../assets/images/icon-facebook.svg";
+import twitterIcon from "../../assets/images/icon-twitter.svg";
+import instagramIcon from "../../assets/images/icon-instagram.svg";
+import youtubeIcon from "../../assets/images/icon-youtube.svg";
 
 function SocialMediaFollowerCard({ socialMedia }) {
-  const { name, icon, username, follower, today, isIncrease } = socialMedia;
+  const { name, username, follower, today, isIncrease } = socialMedia;
 
-  let mediaColor = {};
+  const mediaColor = {
+    facebook: "bg-facebook",
+    twitter: "bg-twitter",
+    instagram: "bg-instagram",
+    youtube: "bg-youtube",
+  };
 
-  if (name === "facebook") {
-    mediaColor = {
-      backgroundColor: "bg-facebook",
-      iconColor: "text-facebook",
-    };
-  } else if (name === "twitter") {
-    mediaColor = {
-      backgroundColor: "bg-twitter",
-      iconColor: "text-twitter",
-    };
-  } else if (name === "instagram") {
-    mediaColor = {
-      backgroundColor: "bg-instagram",
-      iconColor: "",
-    };
-  } else if (name === "youtube") {
-    mediaColor = {
-      backgroundColor: "bg-youtube",
-      iconColor: "text-youtube",
-    };
-  }
+  const mediaIcon = {
+    facebook: facebookIcon,
+    twitter: twitterIcon,
+    instagram: instagramIcon,
+    youtube: youtubeIcon,
+  };
 
   return (
-    <div
-      className={`pt-1 ${mediaColor.backgroundColor} rounded hover:cursor-pointer`}
-    >
+    <div className={`pt-1 ${mediaColor[name]} rounded hover:cursor-pointer`}>
       <div className="w-full py-6 space-y-6 text-center rounded-b bg-lightGrayishBlueCardBg dark:bg-darkDesaturatedBlueCardBg hover:bg-lightGrayishBlueCardBgHover hover:dark:bg-darkDesaturatedBlueCardBgHover">
-        <p>
-          <i
-            className={`fa-brands ${icon} fa-xl ${mediaColor.iconColor} mr-2`}
-          ></i>
+        <p className="flex justify-center">
+          <img className="mr-3" src={mediaIcon[name]} alt={`${name} icon`} />
           <span className="text-sm font-bold text-darkGrayishBlueText dark:text-desaturatedBlueText">
             {username}
           </span>

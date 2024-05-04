@@ -1,18 +1,19 @@
 import React from "react";
+import facebookIcon from "../../assets/images/icon-facebook.svg";
+import twitterIcon from "../../assets/images/icon-twitter.svg";
+import instagramIcon from "../../assets/images/icon-instagram.svg";
+import youtubeIcon from "../../assets/images/icon-youtube.svg";
 
 function TodayOverviewCard({ todayOverviewData }) {
-  const { socialMedia, title, icon, count, percentage, isIncrease } =
+  const { socialMedia, title, count, percentage, isIncrease } =
     todayOverviewData;
 
-  let iconColor = "";
-  if (socialMedia === "facebook") {
-    iconColor = "text-facebook";
-  } else if (socialMedia === "twitter") {
-    iconColor = "text-twitter";
-  } else if (socialMedia === "instagram") {
-  } else if (socialMedia === "youtube") {
-    iconColor = "text-youtube";
-  }
+  const mediaIcon = {
+    facebook: facebookIcon,
+    twitter: twitterIcon,
+    instagram: instagramIcon,
+    youtube: youtubeIcon,
+  };
 
   return (
     <div className="p-6 rounded bg-lightGrayishBlueCardBg dark:bg-darkDesaturatedBlueCardBg hover:cursor-pointer hover:bg-lightGrayishBlueCardBgHover hover:dark:bg-darkDesaturatedBlueCardBgHover">
@@ -21,7 +22,7 @@ function TodayOverviewCard({ todayOverviewData }) {
           {title}
         </p>
         <p>
-          <i className={`fa-brands ${icon} fa-xl ${iconColor}`}></i>
+          <img src={mediaIcon[socialMedia]} alt={`${socialMedia} icon`} />
         </p>
       </div>
 

@@ -42,7 +42,6 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://react.dev/) - JS library
 - [Tailwind CSS](https://tailwindcss.com) - For styles
-- [Material Design](https://mui.com/) - For components
 - [Font Awesome](https://fontawesome.com/) - For icon
 
 ## Author

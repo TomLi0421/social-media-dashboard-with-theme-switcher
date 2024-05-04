@@ -17,8 +17,6 @@ export default {
 
         // Neutral
         // Dark theme
-        darkToggle:
-          "linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))",
         veryDarkBlueBg: "hsl(230, 17%, 14%)",
         veryDarkBlueTopBg: "hsl(232, 19%, 15%)",
         darkDesaturatedBlueCardBg: "hsl(228, 28%, 20%)",
@@ -40,6 +38,8 @@ export default {
       backgroundImage: {
         instagram:
           "linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%))",
+        darkToggle:
+          "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))",
       },
     },
   },

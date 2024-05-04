@@ -5,7 +5,6 @@ const socialMedias = [
   {
     id: 1,
     name: "facebook",
-    icon: "fa-square-facebook",
     username: "@nathanf",
     follower: "1987",
     today: 12,
@@ -14,7 +13,6 @@ const socialMedias = [
   {
     id: 2,
     name: "twitter",
-    icon: "fa-x-twitter",
     username: "@nathanf",
     follower: "1044",
     today: 99,
@@ -23,7 +21,6 @@ const socialMedias = [
   {
     id: 3,
     name: "instagram",
-    icon: "fa-instagram",
     username: "@realnathanf",
     follower: "11k",
     today: 1099,
@@ -32,7 +29,6 @@ const socialMedias = [
   {
     id: 4,
     name: "youtube",
-    icon: "fa-youtube",
     username: "Nathan F.",
     follower: "8239",
     today: 144,
@@ -42,7 +38,7 @@ const socialMedias = [
 
 function SocialMediaFollower() {
   return (
-    <div className="relative z-10 px-6 space-y-6 pt-9 md:grid md:grid-cols-4 md:space-y-0 md:gap-x-6">
+    <div className="relative z-10 px-6 space-y-6 pt-9 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 md:grid md:grid-cols-4 md:space-y-0 md:gap-x-6">
       {socialMedias.map((socialMedia) => (
         <SocialMediaFollowerCard
           key={socialMedia.id}
